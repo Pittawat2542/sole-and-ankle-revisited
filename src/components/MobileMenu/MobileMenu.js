@@ -1,4 +1,4 @@
-import { COLORS, QUERIES } from '../../constants';
+import { COLORS, QUERIES, WEIGHTS } from '../../constants';
 import { DialogContent, DialogOverlay } from '@reach/dialog';
 
 import Icon from '../Icon';
@@ -65,19 +65,18 @@ const Footer = styled.footer`
 const NavLink = styled.a`
 	text-decoration: none;
 	text-transform: uppercase;
-	color: ${COLORS.gray[900]};
+	color: var(--color-gray-900);
 	font-size: ${18 / 16}rem;
-	font-weight: 600;
+	font-weight: var(--font-medium);
 
 	&:first-child {
-		color: ${COLORS.secondary};
+		color: var(--color-secondary);
 	}
 `;
 
 const FooterLink = styled.a`
   text-decoration: none;
-  color: ${COLORS.gray[700]};
-  font-weight: 500;
+  color: var(--color-gray-700);
 `;
 
 const Wrapper = styled(DialogContent)`
@@ -86,7 +85,7 @@ const Wrapper = styled(DialogContent)`
 	left: 20%;
 	bottom: 0;
 	right: 0;
-	background: ${COLORS.white};
+	background: var(--color-white);
 	display: flex;
 	flex-direction: column;
 	padding: 32px;
