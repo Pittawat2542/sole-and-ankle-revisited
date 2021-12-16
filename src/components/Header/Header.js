@@ -55,6 +55,7 @@ const MainHeader = styled.div`
 	padding: 18px 32px;
 	height: 72px;
 	border-bottom: 1px solid ${COLORS.gray[300]};
+	overflow-x: scroll;
 
 	${QUERIES.tabletAndSmaller} {
 		align-items: center;
@@ -67,7 +68,11 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
 	display: flex;
-	gap: 48px;
+	gap: clamp(
+    2rem,
+    2vw + 1rem,
+    3rem
+  );
 	margin: 0px 48px;
 
 	${QUERIES.tabletAndSmaller} {
